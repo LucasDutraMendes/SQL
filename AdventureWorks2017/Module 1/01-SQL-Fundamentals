@@ -1,11 +1,28 @@
--- AdventureWorks2017 Table
+/*
+===============================================================================
+Module 01 - SQL Fundamentals
+Database : AdventureWorks2017
+Author   : Lucas Dutra Mendes
 
--- Module 1
+Topics Covered
+--------------
+- SELECT
+- FROM
+- WHERE
+- ORDER BY
+- DISTINCT
+- TOP
+- LIKE
+- BETWEEN
+- IN
+- NULL
+- COUNT
 
-/* 1 List the first name, last name, and email promotion of all people.
-Order the results by last name. */
+===============================================================================
+*/
 
-SELECT * FROM Person.Person; 
+-- 1 List the first name, last name, and email promotion of all people.
+--Order the results by last name.
 
 SELECT 
 	FirstName, 
@@ -14,14 +31,13 @@ SELECT
 FROM Person.Person
 ORDER BY LastName; 
 
--- 1.1  Silly queries - use DISTINCT to select distincted FirstNames
+-- 1.1 Experiment - Use DISTINCT to return unique first names.
+
 SELECT DISTINCT
 	FirstName 
 FROM PERSON.Person;
 
 -- 2 Return all distinct cities. Sort the cities alphabetically.
-
-SELECT * FROM PERSON.Address;
 
 SELECT DISTINCT 
 	City 
@@ -43,7 +59,7 @@ ORDER BY ListPrice DESC;
 
 -- 4 The 20 most expensive Products - ProductId, Name, List Price
 
-SELECT TOP(20)
+SELECT TOP (20)
 	ProductID,
 	Name,
 	ListPrice
@@ -56,7 +72,7 @@ SELECT
 	ProductID,
 	Name
 FROM Production.Product
-WHERE Name LIKE 'Mountain%'
+WHERE Name LIKE 'Mountain%';
 
 -- 6 Find every product whose name contains the word Road.
 
@@ -242,7 +258,7 @@ SELECT
 FROM Production.Product
 WHERE 
 	Name LIKE '%Touring%'
-	AND ListPrice Between 1000 and 3000
+	AND ListPrice BETWEEN 1000 and 3000
 	AND FinishedGoodsFlag = 1
 	AND Color IS NOT NULL
 ORDER BY
@@ -296,9 +312,6 @@ FROM HumanResources.Employee
 WHERE HireDate < '2010-01-01'
 ORDER BY
 	HireDate DESC; 
-	
-select * from HumanResources.Employee
-Table: HumanResources.Employee
 
 -- 25 Return the 50 oldest sales orders.
 
@@ -310,7 +323,7 @@ SELECT TOP (50)
 FROM Sales.SalesOrderHeader
 ORDER BY OrderDate ASC;
 
--- 26 All Products where weight is between 700 and 500.
+-- 26 All Products where weight is between 500 and 700.
 
 SELECT 
 	ProductID,
