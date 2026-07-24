@@ -130,14 +130,9 @@ WHERE Color IS NULL;
 
 -- 11.1 Count
 
-SELECT COUNT(*)
+SELECT COUNT(Name)
 FROM Production.Product
 WHERE Color IS NULL;
-
-SELECT COUNT(*)
-FROM Production.Product
-WHERE Color = ' ';
-
 
 -- 12 Return every productId, Name, ProductNumber that has a color assigned. sort by color
 
@@ -279,7 +274,6 @@ ORDER BY
 	ListPrice ASC,
 	Name ASC;
 
-
 --22 How many different cities exist in the database?
 
 SELECT 
@@ -333,5 +327,3 @@ SELECT
 FROM Production.Product 
 WHERE Weight BETWEEN 500 AND 700;
 --WHERE Weight >= 500 and Weight <= 700; 
-
-
