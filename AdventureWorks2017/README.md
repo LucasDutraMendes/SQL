@@ -6,26 +6,46 @@ The learning path is structured progressively, starting with SQL fundamentals an
 
 ---
 
-## Modules
+# Prerequisites
+
+This repository uses the **AdventureWorks2017** sample database provided by Microsoft.
+
+Before running the SQL scripts, download and restore the database in SQL Server.
+
+**Official Microsoft Documentation**
+
+https://learn.microsoft.com/sql/samples/adventureworks-install-configure
+
+**Official Download Repository**
+
+https://github.com/microsoft/sql-server-samples
+
+**Database File**
+
+`AdventureWorks2017.bak`
+
+---
+
+# Modules
 
 | Module | Description |
 |---------|-------------|
-| **01 - SQL Fundamentals** | Core SQL syntax including `SELECT`, `FROM`, `WHERE`, `ORDER BY`, `TOP`, `DISTINCT`, `LIKE`, `BETWEEN`, `IN`, and `NULL` filtering. |
-| **01.5 - SQL Functions** | Common SQL Server functions for string manipulation, mathematical operations, date & time handling, data type conversion, and NULL handling. |
-| **02 - JOINs** | Combining data from multiple tables using `INNER`, `LEFT`, `RIGHT`, `FULL`, `CROSS`, and `SELF JOIN`. |
-| **03 - Grouping & Aggregation** | Data aggregation using `GROUP BY`, `HAVING`, aggregate functions, and conditional logic with `CASE`. |
-| **04 - Subqueries** | Scalar, correlated, and nested subqueries using `IN`, `EXISTS`, `ANY`, and `ALL`. |
-| **05 - Common Table Expressions (CTEs)** | Organizing complex queries using Common Table Expressions, including recursive CTEs. |
-| **06 - Window Functions** | Analytical functions such as `ROW_NUMBER`, `RANK`, `DENSE_RANK`, `LAG`, `LEAD`, and window aggregates. |
-| **07 - Views** | Creating and managing reusable database views. |
-| **08 - Stored Procedures** | Developing reusable stored procedures with parameters and execution logic. |
-| **09 - Indexes** | Clustered and nonclustered indexes, execution plans, and indexing strategies. |
-| **10 - Query Performance** | Query optimization, SARGability, execution plans, statistics, and performance tuning. |
+| **01 - SQL Fundamentals** | Core SQL syntax including SELECT, FROM, WHERE, ORDER BY, TOP, DISTINCT, LIKE, BETWEEN, IN, and NULL filtering. |
+| **02 - SQL Functions** | Common SQL Server functions for string manipulation, mathematical operations, date & time handling, data type conversion, and NULL handling. |
+| **03 - JOINs** | Combining data from multiple tables using INNER, LEFT, RIGHT, FULL, CROSS, and SELF JOIN. |
+| **04 - Grouping & Aggregation** | Data aggregation using GROUP BY, HAVING, aggregate functions, and conditional logic with CASE. |
+| **05 - Subqueries** | Scalar, correlated, and nested subqueries using IN, EXISTS, ANY, and ALL. |
+| **06 - Common Table Expressions (CTEs)** | Organizing complex queries using Common Table Expressions, including recursive CTEs. |
+| **07 - Window Functions** | Analytical functions such as ROW_NUMBER, RANK, DENSE_RANK, LAG, LEAD, and window aggregates. |
+| **08 - Views** | Creating and managing reusable database views. |
+| **09 - Stored Procedures** | Developing reusable stored procedures with parameters and execution logic. |
+| **10 - Indexes** | Clustered and nonclustered indexes, execution plans, and indexing strategies. |
+| **11 - Query Performance** | Query optimization, SARGability, execution plans, statistics, and performance tuning. |
 | **Challenges** | Business-oriented SQL problems combining concepts from multiple modules. |
 
 ---
 
-## Learning Goals
+# Learning Goals
 
 - Build strong SQL fundamentals.
 - Write clean, readable, and maintainable SQL code.
@@ -35,7 +55,8 @@ The learning path is structured progressively, starting with SQL fundamentals an
 
 ---
 
-## Database
+# Technologies
 
 - Microsoft SQL Server
+- SQL Server Management Studio (SSMS)
 - AdventureWorks2017 Sample Database
