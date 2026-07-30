@@ -31,6 +31,7 @@ https://github.com/microsoft/sql-server-samples
 | Module | Description |
 |---------|-------------|
 | **01 - SQL Fundamentals** | Core SQL syntax including SELECT, FROM, WHERE, ORDER BY, TOP, DISTINCT, LIKE, BETWEEN, IN, and NULL filtering. |
+| **01.5 - SQL Functions** | LEN, LEFT, RIGHT, SUBSTRING, UPPER, LOWER, CHARINDEX, ROUND, CEILING, FLOOR, ABS, GETDATE, YEAR, MONTH, DAY, DATEADD, DATEDIFF, EOMONTH, DATEFROMPARTS, CAST, CONVERT, ISNULL, and COALESCE. |
 | **02 - SQL Functions** | Common SQL Server functions for string manipulation, mathematical operations, date & time handling, data type conversion, and NULL handling. |
 | **03 - JOINs** | Combining data from multiple tables using INNER, LEFT, RIGHT, FULL, CROSS, and SELF JOIN. |
 | **04 - Grouping & Aggregation** | Data aggregation using GROUP BY, HAVING, aggregate functions, and conditional logic with CASE. |
