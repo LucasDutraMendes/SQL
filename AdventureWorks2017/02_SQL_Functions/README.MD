@@ -1,4 +1,4 @@
-# Module 1.5 - SQL Functions
+# Module 02 - SQL Functions
 
 ## Overview
 
