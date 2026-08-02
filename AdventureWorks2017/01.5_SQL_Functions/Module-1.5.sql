@@ -246,7 +246,7 @@ FROM Production.Product
 WHERE
     CHARINDEX('A', ProductNumber, 2) != 0;     
 
--- 21 — The business stores product codes in the following format: AA-1234-BB
+-- 21 â€” The business stores product codes in the following format: AA-1234-BB
 -- AA = Product Category
 -- 123456 = Product Identifier
 -- BB = Product Version
