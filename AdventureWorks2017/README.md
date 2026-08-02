@@ -31,10 +31,9 @@ https://github.com/microsoft/sql-server-samples
 | Module | Description |
 |---------|-------------|
 | **01 - SQL Fundamentals** | Core SQL syntax including SELECT, FROM, WHERE, ORDER BY, TOP, DISTINCT, LIKE, BETWEEN, IN, and NULL filtering. |
-| **01.5 - SQL Functions** | LEN, LEFT, RIGHT, SUBSTRING, UPPER, LOWER, CHARINDEX, ROUND, CEILING, FLOOR, ABS, GETDATE, YEAR, MONTH, DAY, DATEADD, DATEDIFF, EOMONTH, DATEFROMPARTS, CAST, CONVERT, ISNULL, and COALESCE. |
-| **02 - SQL Functions** | Common SQL Server functions for string manipulation, mathematical operations, date & time handling, data type conversion, and NULL handling. |
-| **03 - JOINs** | Combining data from multiple tables using INNER, LEFT, RIGHT, FULL, CROSS, and SELF JOIN. |
-| **04 - Grouping & Aggregation** | Data aggregation using GROUP BY, HAVING, aggregate functions, and conditional logic with CASE. |
+| **02 - SQL Functions** | Common SQL Server functions including LEN, LEFT, RIGHT, SUBSTRING, UPPER, LOWER, CHARINDEX, ROUND, CEILING, FLOOR, ABS, GETDATE, YEAR, MONTH, DAY, DATEADD, DATEDIFF, EOMONTH, DATEFROMPARTS, CAST, CONVERT, ISNULL, and COALESCE. |
+| **03 - SQL JOINs** | Combining data from multiple tables using INNER, LEFT, RIGHT, FULL, CROSS, and SELF JOIN. |
+| **04 - Grouping and Aggregation** | Data aggregation using GROUP BY, HAVING, aggregate functions, and conditional logic with CASE. |
 | **05 - Subqueries** | Scalar, correlated, and nested subqueries using IN, EXISTS, ANY, and ALL. |
 | **06 - Common Table Expressions (CTEs)** | Organizing complex queries using Common Table Expressions, including recursive CTEs. |
 | **07 - Window Functions** | Analytical functions such as ROW_NUMBER, RANK, DENSE_RANK, LAG, LEAD, and window aggregates. |
@@ -42,7 +41,7 @@ https://github.com/microsoft/sql-server-samples
 | **09 - Stored Procedures** | Developing reusable stored procedures with parameters and execution logic. |
 | **10 - Indexes** | Clustered and nonclustered indexes, execution plans, and indexing strategies. |
 | **11 - Query Performance** | Query optimization, SARGability, execution plans, statistics, and performance tuning. |
-| **Challenges** | Business-oriented SQL problems combining concepts from multiple modules. |
+| **12 - SQL Challenges** | Business-oriented SQL problems that integrate concepts from multiple modules and simulate real-world analytical scenarios. |
 
 ---
 
