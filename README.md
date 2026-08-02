@@ -47,17 +47,17 @@ Additional databases will be added as the learning journey progresses.
 SQL/
 │
 ├── AdventureWorks2017/
-│   ├── 01-SQL-Fundamentals/
-│   ├── 01.5-SQL-Functions/
-│   ├── 02-Joins/
-│   ├── 03-Grouping-and-Aggregation/
-│   ├── 04-Subqueries/
-│   ├── 05-Common-Table-Expressions/
-│   ├── 06-Window-Functions/
-│   ├── 07-Views/
-│   ├── 08-Stored-Procedures/
-│   ├── 09-Indexes/
-│   ├── 10-Query-Performance/
+│   ├── 01_SQL_Fundamentals/
+│   ├── 02_SQL_Functions/
+│   ├── 03_SQL_Joins/
+│   ├── 04_Grouping_and_Aggregation/
+│   ├── 05_Subqueries/
+│   ├── 06_Common_Table_Expressions/
+│   ├── 07_Window_Functions/
+│   ├── 08_Views/
+│   ├── 09_Stored_Procedures/
+│   ├── 10_Indexes/
+│   ├── 11_Query_Performance/
 │   └── README.md
 │
 └── README.md
