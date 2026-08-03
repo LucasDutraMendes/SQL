@@ -1,10 +1,12 @@
-# SQL JOINs
+# Module 03 - SQL JOINs
 
-This module introduces one of the most important concepts in relational databases: **SQL JOINs**.
+## Overview
 
-JOIN operations allow data stored across multiple tables to be combined based on related keys, making it possible to retrieve meaningful information from relational databases.
+This module introduces SQL JOIN operations using the AdventureWorks2017 sample database.
 
-This module covers the most commonly used JOIN types in SQL Server through practical examples using the **AdventureWorks2017** database.
+JOINs are one of the most important concepts in relational databases, allowing data stored in multiple related tables to be combined into meaningful query results.
+
+The objective of this module is to understand how different JOIN types work and when each one should be used in real-world SQL queries.
 
 ---
 
@@ -16,29 +18,45 @@ This module covers the most commonly used JOIN types in SQL Server through pract
 
 ---
 
-## Topics Covered
-
-- INNER JOIN
-- LEFT JOIN
-- RIGHT JOIN
-- FULL OUTER JOIN
-- LEFT JOIN (Excluding Matches)
-- RIGHT JOIN (Excluding Matches)
-- CROSS JOIN
-- SELF JOIN
-
----
-
 ## Learning Objectives
 
 By completing this module, you will be able to:
 
-- Understand how relational tables are connected.
-- Choose the appropriate JOIN type for different scenarios.
+- Understand relationships between database tables.
+- Combine data using different JOIN types.
 - Retrieve matching and non-matching records.
-- Combine multiple tables using primary and foreign keys.
-- Interpret JOIN execution results.
-- Apply JOINs to real-world business problems.
+- Select the appropriate JOIN for different business scenarios.
+- Write efficient and readable JOIN queries.
+- Interpret query results involving multiple tables.
 
 ---
 
+## Topics Covered
+
+### INNER JOIN
+
+### LEFT JOIN
+
+### RIGHT JOIN
+
+### FULL OUTER JOIN
+
+### LEFT JOIN (Excluding Matches)
+
+### RIGHT JOIN (Excluding Matches)
+
+### CROSS JOIN
+
+### SELF JOIN
+
+---
+
+## Exercises
+
+Each topic includes:
+
+- Concept introduction
+- Practical examples
+- Hands-on exercises
+- Solutions
+- Real-world SQL scenarios
