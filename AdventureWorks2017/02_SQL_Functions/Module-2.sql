@@ -1,5 +1,5 @@
 /*==============================================================================
-Module 1.5 - SQL Functions
+Module 2 - SQL Functions
 
 Database: AdventureWorks2017
 Language: T-SQL (SQL Server)
