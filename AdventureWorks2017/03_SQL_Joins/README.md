@@ -18,7 +18,6 @@ The objective of this module is to understand how different JOIN types work and 
 
 ---
 
----
 ## Exercises
 
 | # | Topic | Description |
@@ -47,9 +46,9 @@ The objective of this module is to understand how different JOIN types work and 
 | 22 | CROSS JOIN | Generate every possible combination between sales territories and salespeople. |
 | 23 | CROSS JOIN | Generate every possible combination between products and sales territories. |
 | - | SELF JOIN | Concept reference demonstrating how a table can be joined to itself using different aliases. |
----
 
 ---
+
 ## Learning Objectives
 
 By completing this module, you will be able to:
@@ -60,7 +59,6 @@ By completing this module, you will be able to:
 - Select the appropriate JOIN for different business scenarios.
 - Write efficient and readable JOIN queries.
 - Interpret query results involving multiple tables.
----
 
 ---
 
