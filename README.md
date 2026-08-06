@@ -1,49 +1,58 @@
-# SQL
+# SQL Server
 
-This repository contains my SQL studies, exercises, and projects developed as part of my Data Engineering learning journey.
+A complete SQL Server learning repository built using the **AdventureWorks2017** sample database.
 
-The goal is not only to solve SQL problems but also to write clean, readable, maintainable, and efficient SQL code following industry best practices.
+The goal of this repository is to progressively develop SQL skills, from the fundamentals to advanced query optimization techniques, through practical exercises and real-world business scenarios.
 
-## Objectives
+---
 
-- Develop strong SQL fundamentals.
-- Master SQL functions and data manipulation.
-- Learn advanced querying techniques.
-- Practice query optimization.
-- Build a professional SQL portfolio.
-- Prepare for Data Engineer technical interviews.
+## Learning Roadmap
 
-## Databases
+| Module | Topic | Status |
+|:------:|-------|:------:|
+| 01 | SQL Fundamentals | ✅ |
+| 02 | SQL Functions | ✅ |
+| 03 | SQL JOINs | ✅ |
+| 04 | Grouping and Aggregation | ✅ |
+| 05 | Subqueries | 🚧 |
+| 06 | Common Table Expressions (CTEs) | ⏳ |
+| 07 | Window Functions | ⏳ |
+| 08 | Views | ⏳ |
+| 09 | Stored Procedures | ⏳ |
+| 10 | Indexes | ⏳ |
+| 11 | Query Performance | ⏳ |
+| 12 | SQL Challenges | ⏳ |
 
-| Database | Status |
-|----------|--------|
-| AdventureWorks2017 (SQL Server) | 🚧 In Progress |
+**Legend**
 
-Additional databases will be added as the learning journey progresses.
+- ✅ Completed
+- 🚧 In Progress
+- ⏳ Planned
 
-## Topics
+---
 
-- SQL Fundamentals
+## Skills Covered
+
+- Data Retrieval
+- Data Filtering
+- Sorting Results
 - SQL Functions
-  - String Functions
-  - Numeric Functions *(Coming Soon)*
-  - Date & Time Functions *(Coming Soon)*
-  - Conversion Functions *(Coming Soon)*
-  - NULL Handling Functions *(Coming Soon)*
-- Joins
-- Grouping and Aggregation
+- JOIN Operations
+- Data Aggregation
 - Subqueries
 - Common Table Expressions (CTEs)
 - Window Functions
 - Views
 - Stored Procedures
 - Indexes
-- Query Performance
-- T-SQL
+- Query Performance Optimization
+- SQL Problem Solving
+
+---
 
 ## Repository Structure
 
-```
+```text
 SQL/
 │
 ├── AdventureWorks2017/
@@ -58,19 +67,57 @@ SQL/
 │   ├── 09_Stored_Procedures/
 │   ├── 10_Indexes/
 │   ├── 11_Query_Performance/
-│   ├── 12_SQL Challenges
+│   ├── 12_SQL_Challenges/
 │   └── README.md
 │
 └── README.md
 ```
 
-## Technologies
+---
 
-- Microsoft SQL Server
-- SQL Server Management Studio (SSMS)
-- Git
-- GitHub
+## Database
 
-# Author
+This repository uses the **AdventureWorks2017** sample database for SQL Server.
+
+---
+
+## Learning Approach
+
+Each module includes:
+
+- Concept overview
+- Practical examples
+- Progressive exercises
+- Business-oriented scenarios
+- Fully documented SQL scripts
+- Individual module documentation
+
+---
+
+## Repository Goals
+
+After completing this repository, you should be able to:
+
+- Write efficient SQL queries.
+- Combine data from multiple related tables.
+- Perform aggregations and analytical calculations.
+- Build complex queries using subqueries and CTEs.
+- Use Window Functions for advanced analysis.
+- Create Views and Stored Procedures.
+- Improve query performance using indexes and optimization techniques.
+- Solve practical SQL problems commonly found in technical interviews.
+
+---
+
+## Progress
+
+- Modules Completed: **4 / 12**
+- Exercises Completed: **100+**
+- Database: **AdventureWorks2017**
+- SQL Dialect: **Microsoft SQL Server (T-SQL)**
+
+---
+
+## Author
 
 **Lucas Dutra Mendes**
