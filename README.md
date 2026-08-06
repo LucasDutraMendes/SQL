@@ -58,6 +58,7 @@ SQL/
 │   ├── 09_Stored_Procedures/
 │   ├── 10_Indexes/
 │   ├── 11_Query_Performance/
+│   ├── 12_SQL Challenges
 │   └── README.md
 │
 └── README.md
