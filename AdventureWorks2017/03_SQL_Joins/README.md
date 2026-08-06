@@ -20,6 +20,14 @@ The objective of this module is to understand how different JOIN types work and 
 
 ## Exercises
 
+Each topic includes:
+
+- Concept introduction
+- Practical examples
+- Hands-on exercises
+- Solutions
+- Real-world SQL scenarios
+
 | # | Topic | Description |
 |---:|--------|-------------|
 | 1 | INNER JOIN | Retrieve the customer ID, sales order ID, and order date for every order. |
@@ -79,15 +87,3 @@ By completing this module, you will be able to:
 ### CROSS JOIN
 
 ### SELF JOIN
-
----
-
-## Exercises
-
-Each topic includes:
-
-- Concept introduction
-- Practical examples
-- Hands-on exercises
-- Solutions
-- Real-world SQL scenarios
