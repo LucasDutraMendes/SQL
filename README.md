@@ -1,5 +1,5 @@
 ![SQL Server](https://img.shields.io/badge/SQL%20Server-T--SQL-red)
-![Status](https://img.shields.io/badge/Modules-4%2F12-blue)
+![Status](https://img.shields.io/badge/Modules-5%2F12-blue)
 ![Database](https://img.shields.io/badge/Database-AdventureWorks2017-green)
 
 # SQL Server
