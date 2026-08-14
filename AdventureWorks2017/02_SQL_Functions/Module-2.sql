@@ -132,7 +132,7 @@ FROM Production.Product;
 SELECT
     ProductID,
     ProductNumber,
-    LEFT(ProductNumber, 5) AS TwoCharactersProduct
+    LEFT(ProductNumber, 2) AS TwoCharactersProduct
 FROM Production.Product; 
 
 -- 10 the first 5 characters of the product name.
@@ -173,7 +173,7 @@ FROM Production.Product
 WHERE
     RIGHT(ProductNumber, 2) = '42'; 
 
--- SUBSTRING(text, startPoint,length) 
+-- 14 SUBSTRING(text, startPoint,length) 
 
 SELECT
     ProductID,
