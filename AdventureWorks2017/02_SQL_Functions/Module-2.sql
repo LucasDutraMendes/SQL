@@ -173,7 +173,10 @@ FROM Production.Product
 WHERE
     RIGHT(ProductNumber, 2) = '42'; 
 
--- 14 SUBSTRING(text, startPoint,length) 
+-- SUBSTRING(text, startPoint,length) 
+-- 14 Write a query that retrieves the ProductID, Name, and ProductNumber from the Production.Product table. 
+-- Then, using the SUBSTRING() function, extract 4 characters from the middle of the ProductNumber, 
+-- starting at the 4th character, and display the result in a new column named MiddleCode.
 
 SELECT
     ProductID,
