@@ -431,7 +431,7 @@ WHERE
 SELECT
     GETDATE() AS CurrentDate,
     EOMONTH(GETDATE()) AS EndOfCurrentMonth,
-    EOMONTH(GETDATE(), 1);
+    EOMONTH(GETDATE(), 1) AS EndOfNextMonth;
 
 -- 36 ProductID, Name, SellStartDate, SellMonthEnd - ModifiedDate - EndOfPreviousMonth
 
