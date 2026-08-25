@@ -19,8 +19,8 @@ The goal of this repository is to progressively develop SQL skills, from the fun
 | 03 | SQL JOINs | ✅ |
 | 04 | Grouping and Aggregation | ✅ |
 | 05 | Subqueries | ✅ |
-| 06 | Common Table Expressions (CTEs) | 🚧 |
-| 07 | Window Functions | ⏳ |
+| 06 | Common Table Expressions (CTEs) | ✅ |
+| 07 | Window Functions | 🚧 |
 | 08 | Views | ⏳ |
 | 09 | Stored Procedures | ⏳ |
 | 10 | Indexes | ⏳ |
