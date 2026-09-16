@@ -1,4 +1,4 @@
-﻿/*
+/*
 =============================================================
 Module 09 - Stored Procedures
 =============================================================
@@ -421,26 +421,42 @@ EXEC UpdateCustomerTerritory
 -- Create a stored procedure named UpdateCustomerTerritoryTransactional.
 -- Add an input parameter named @CustomerID with type INT.
 -- Add an input parameter named @TerritoryID with type INT.
+-- Add an input parameter named @ConfirmUpdate with type BIT.
 -- Begin a transaction.
 -- Update Sales.Customer using the provided CustomerID and TerritoryID.
--- Commit the transaction.
--- Execute the procedure using CustomerID = 30119 and TerritoryID = 3.
--- Verify that the customer's TerritoryID was updated.
+-- If @ConfirmUpdate = 1, commit the transaction.
+-- If @ConfirmUpdate = 0, roll back the transaction.
+-- Execute the procedure using CustomerID = 30119, TerritoryID = 3, and @ConfirmUpdate = 0.
+-- Verify that the TerritoryID was not changed.
+-- Execute the procedure again using @ConfirmUpdate = 1.
+-- Verify that the TerritoryID was updated to 3.
 
 CREATE PROCEDURE UpdateCustomerTerritoryTransactional
-	@CustomerID INT,
-	@TerritoryID INT AS
+    @CustomerID INT,
+    @TerritoryID INT,
+    @ConfirmUpdate BIT
+AS
 BEGIN
-	BEGIN TRANSACTION;
-		UPDATE Sales.Customer
-		SET TerritoryID = @TerritoryID
-		WHERE CustomerID = @CustomerID;
-	COMMIT;
+    BEGIN TRANSACTION;
+
+    UPDATE Sales.Customer
+    SET TerritoryID = @TerritoryID
+    WHERE CustomerID = @CustomerID;
+
+    IF @ConfirmUpdate = 1
+    BEGIN
+        COMMIT;
+    END
+    ELSE
+    BEGIN
+        ROLLBACK;
+    END;
 END;
 
 EXEC UpdateCustomerTerritoryTransactional
-	@CustomerID = 30119,
-	@TerritoryID = 3;
+    @CustomerID = 30119,
+    @TerritoryID = 3,
+    @ConfirmUpdate = 0;
 
 -- 17 The sales manager wants a reusable procedure to retrieve customer order information.
 -- Create a stored procedure named GetCustomerOrderSummary.
