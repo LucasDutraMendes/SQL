@@ -22,8 +22,8 @@ The goal of this repository is to progressively develop SQL skills, from the fun
 | 06 | Common Table Expressions (CTEs) | ✅ |
 | 07 | Window Functions | ✅ |
 | 08 | Views | ✅ |
-| 09 | Stored Procedures | 🚧 |
-| 10 | Indexes | 🚧 |
+| 09 | Stored Procedures | ✅ |
+| 10 | Indexes | ✅ |
 | 11 | Query Performance | 🚧 |
 | 12 | SQL Challenges | 🚧 |
 
@@ -31,7 +31,6 @@ The goal of this repository is to progressively develop SQL skills, from the fun
 
 - ✅ Completed
 - 🚧 In Progress
-- ⏳ Planned
 
 ---
 
