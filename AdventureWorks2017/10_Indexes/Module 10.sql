@@ -105,7 +105,7 @@ WHERE object_id = OBJECT_ID('Production.Product')
   AND name = 'IX_Product_ListPrice'
 ORDER BY name;
 
--- 5 Consider the two queries above.
+-- 5 Consider the two queries below.
 -- For Query A, identify which existing index can support the search.
 -- For Query B, identify which existing index can support the search.
 -- For each query, state whether the index is clustered or nonclustered.
