@@ -381,6 +381,7 @@ ORDER BY
 
 -- 30.1 Real-world example
 -- Return products modified in the last 30 days
+
 SELECT
     ModifiedDate
 FROM Production.Product
@@ -396,6 +397,7 @@ SELECT
 
 -- 32 ProductID, Name, SellStartDate, YearsSelling - How many years has passed since SellStartDate
 -- MonthsSelling
+
 SELECT
     ProductID,
     Name,
