@@ -1,4 +1,4 @@
-# Module 12 - SQL Advanced Challenges
+# Module 12 - SQL Challenges
 
 ## Overview
 
@@ -40,7 +40,7 @@ It covers SQL functions and data formatting, table relationships and joins, aggr
 
 ---
 
-## SQL Advanced Challenges Workflow
+## SQL Challenges Workflow
 
 ```text
                  SQL Fundamentals
