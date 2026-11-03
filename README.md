@@ -25,13 +25,10 @@ The goal of this repository is to progressively develop SQL skills, from the fun
 | 09 | Stored Procedures | ✅ |
 | 10 | Indexes | ✅ |
 | 11 | Query Performance | ✅ |
-| 12 | SQL Challenges | 🚧 |
+| 12 | SQL Challenges | ✅ |
 
 **Legend**
-
 - ✅ Completed
-- 🚧 In Progress
-
 ---
 
 ## Skills Covered
@@ -114,8 +111,8 @@ After completing this repository, you should be able to:
 
 ## Progress
 
-- Modules Completed: **4 / 12**
-- Exercises Completed: **100+**
+- Modules Completed: **12 / 12**
+- Exercises Completed: **300+**
 - Database: **AdventureWorks2017**
 - SQL Dialect: **Microsoft SQL Server (T-SQL)**
 
