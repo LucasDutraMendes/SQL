@@ -52,6 +52,7 @@ SELECT
 	ProductNumber,
 	ListPrice
 FROM Production.Product; 
+GO
 
 EXEC GetProductList;
 
@@ -61,6 +62,7 @@ EXEC GetProductList;
 -- No modifications to the procedure are required.
 
 EXEC GetProductList;
+GO
 
 -- 3 The production manager wants to search for products above a minimum price.
 -- Create a stored procedure named GetProductsByMinPrice.
@@ -80,8 +82,10 @@ SELECT
 	ListPrice
 FROM Production.Product
 WHERE ListPrice >= @MinPrice;
+GO
 
 EXEC GetProductsByMinPrice @MinPrice = 1000;
+GO
 
 -- 4 The production manager wants to search for products within a price range.
 -- Create a stored procedure named GetProductsByPriceRange.
@@ -100,10 +104,12 @@ SELECT
 	ListPrice
 FROM Production.Product
 WHERE ListPrice BETWEEN @MinPrice AND @MaxPrice;
+GO
 
 EXEC GetProductsByPriceRange 
 @MinPrice = 100,
 @MaxPrice = 500;
+GO
 
 -- 5 The sales manager wants to retrieve all orders for a specific customer.
 -- Create a stored procedure named GetCustomerOrders.
@@ -121,8 +127,10 @@ SELECT
 	TotalDue
 FROM Sales.SalesOrderHeader
 WHERE CustomerID = @CustomerID; 
+GO
 
 EXEC GetCustomerOrders @CustomerID = 11000;
+GO
 
 -- 6 The sales manager wants a procedure that calculates the total sales for a specific customer.
 -- Create a stored procedure named GetCustomerTotalSales.
@@ -146,8 +154,10 @@ BEGIN
 		@CustomerID AS CustomerID,
 		@TotalSales AS TotalSales;
 END;
+GO
 
 EXEC GetCustomerTotalSales @CustomerID = 11000;
+GO
 
 -- 7 The sales manager wants to evaluate the sales level of a specific customer.
 -- Create a stored procedure named EvaluateCustomerSales.
@@ -185,8 +195,10 @@ BEGIN
             'Low' AS SalesCategory;
 	END;
 END;
+GO
 
 EXEC EvaluateCustomerSales @CustomerID = 11000;
+GO
 
 -- 8 The sales manager wants to classify a specific customer based on total sales.
 -- Create a stored procedure named EvaluateCustomerSalesCase.
@@ -219,8 +231,10 @@ BEGIN
             ELSE 'Low'
 		END AS SalesCategory;
 END;
+GO
 
 EXEC EvaluateCustomerSalesCase @CustomerID = 11000;
+GO
 
 -- 9 The sales manager wants to retrieve the total sales of a specific customer through an OUTPUT parameter.
 -- Create a stored procedure named GetCustomerTotalSalesOutput.
@@ -232,7 +246,7 @@ EXEC EvaluateCustomerSalesCase @CustomerID = 11000;
 -- Store the returned value in a local variable named @Sales.
 -- Display @Sales after executing the procedure.
 
-CREATE PROCEDURE GetCustomerTotalSalesOutPut
+CREATE PROCEDURE GetCustomerTotalSalesOutput
 	@CustomerID INT,
 	@TotalSales MONEY OUTPUT
 AS
@@ -242,14 +256,15 @@ BEGIN
 	FROM Sales.SalesOrderHeader
 	WHERE CustomerID = @CustomerID;
 END;
-
+GO
 DECLARE @Sales MONEY;
 
-EXEC GetCustomerTotalSalesOutPut
+EXEC GetCustomerTotalSalesOutput
     @CustomerID = 11000,
     @TotalSales = @Sales OUTPUT;
 
 SELECT @Sales AS TotalSales;
+GO
 
 -- 10 The sales manager wants to verify whether a specific customer exists.
 -- Create a stored procedure named CheckCustomer.
@@ -276,20 +291,21 @@ BEGIN
 		RETURN 0;
 	END;
 END;
-
+GO
 DECLARE @Result INT;
 
 EXEC @Result = CheckCustomer
 	@CustomerID = 11000;
 
 SELECT @Result AS Result;
+GO
 
 -- 11 The sales manager wants to modify the status codes returned by the CheckCustomer procedure.
 -- Alter the existing CheckCustomer procedure.
 -- Keep the same @CustomerID parameter and customer existence check.
 -- Change the return values:
 --   11 if the customer exists.
---   00 if the customer does not exist.
+--   0 if the customer does not exist.
 -- Execute the procedure using CustomerID = 11000 and capture the result in @Result.
 
 ALTER PROCEDURE CheckCustomer 
@@ -304,9 +320,10 @@ BEGIN
 	END
 	ELSE
 	BEGIN
-		RETURN 00;
+		RETURN 0;
 	END;
 END;
+GO
 
 DECLARE @Result INT;
 
@@ -314,6 +331,7 @@ EXEC @Result = CheckCustomer
 	@CustomerID = 11000;
 
 SELECT @Result AS Result;
+GO
 
 -- 12 The sales manager wants the CheckCustomer procedure to return a text-based status.
 -- Alter the existing CheckCustomer procedure.
@@ -345,6 +363,7 @@ BEGIN
         SET @Result = 'F';
     END;
 END;
+GO
 
 DECLARE @CustomerResult CHAR(1);
 
@@ -353,14 +372,17 @@ EXEC CheckCustomer
     @Result = @CustomerResult OUTPUT;
 
 SELECT @CustomerResult AS Result;
+GO
 
 -- 13 The sales manager no longer needs the GetProductList procedure.
 -- Drop the existing GetProductList procedure.
 -- After dropping it, attempt to execute the procedure to confirm that it no longer exists.
 
 DROP PROCEDURE GetProductList;
+GO
 
 EXEC GetProductList;
+GO
 
 -- 14 The sales team wants a procedure to register a new customer.
 -- Create a stored procedure named AddCustomer.
@@ -386,6 +408,7 @@ BEGIN
 		@TerritoryID
 	);
 END;
+GO
 
 EXEC AddCustomer
 	@TerritoryID = 1,
@@ -394,6 +417,7 @@ EXEC AddCustomer
 SELECT TOP 1 *
 FROM Sales.Customer
 ORDER BY CustomerID DESC;
+GO
 
 -- 15 The sales manager wants a procedure to update the sales territory of a customer.
 -- Create a stored procedure named UpdateCustomerTerritory.
@@ -412,10 +436,12 @@ BEGIN
 	SET TerritoryID = @TerritoryID
 	WHERE CustomerID = @CustomerID;
 END;
+GO
 
 EXEC UpdateCustomerTerritory
 	@CustomerID = 30119,
 	@TerritoryID = 2; 
+GO
 
 -- 16 The sales manager wants to update a customer's territory using a transaction.
 -- Create a stored procedure named UpdateCustomerTerritoryTransactional.
@@ -438,11 +464,9 @@ CREATE PROCEDURE UpdateCustomerTerritoryTransactional
 AS
 BEGIN
     BEGIN TRANSACTION;
-
     UPDATE Sales.Customer
     SET TerritoryID = @TerritoryID
     WHERE CustomerID = @CustomerID;
-
     IF @ConfirmUpdate = 1
     BEGIN
         COMMIT;
@@ -452,11 +476,33 @@ BEGIN
         ROLLBACK;
     END;
 END;
+GO
 
 EXEC UpdateCustomerTerritoryTransactional
     @CustomerID = 30119,
     @TerritoryID = 3,
     @ConfirmUpdate = 0;
+GO
+
+SELECT
+    CustomerID,
+    TerritoryID
+FROM Sales.Customer
+WHERE CustomerID = 30119;
+GO
+
+EXEC UpdateCustomerTerritoryTransactional
+    @CustomerID = 30119,
+    @TerritoryID = 3,
+    @ConfirmUpdate = 1;
+GO
+
+SELECT
+    CustomerID,
+    TerritoryID
+FROM Sales.Customer
+WHERE CustomerID = 30119;
+GO
 
 -- 17 The sales manager wants a reusable procedure to retrieve customer order information.
 -- Create a stored procedure named GetCustomerOrderSummary.
@@ -494,11 +540,11 @@ BEGIN
 	FROM Sales.Customer AS sc
 	WHERE CustomerID = @CustomerID;
 END;
+GO
 
 EXEC GetCustomerOrderSummary
 	@CustomerID = 11000;
-
-SELECT TOP 1 * FROM Sales.SalesOrderHeader
+GO
 
 -- 18 Do the exercise 17 using JOIN
 
@@ -520,9 +566,11 @@ BEGIN
         sc.CustomerID,
         sc.AccountNumber;
 END;
+GO
 
 EXEC GetCustomerOrderSummary2
     @CustomerID = 11000;
+GO
 
 -- 19 Extra - List Stored Procedures and their definitions
 
@@ -537,6 +585,7 @@ FROM sys.procedures AS p
 INNER JOIN sys.sql_modules AS m
     ON p.object_id = m.object_id
 ORDER BY p.name;
+GO
 
 -- 20 Final Challenge
 -- The sales manager wants a stored procedure to evaluate a customer's sales performance.
@@ -560,27 +609,28 @@ ORDER BY p.name;
 -- Execute the procedure using CustomerID = 11000.
 
 CREATE PROCEDURE EvaluateCustomerPerformance
-	@CustomerID INT AS
+    @CustomerID INT
+AS
 BEGIN
     SELECT
         sc.CustomerID,
-        sc.AccountNumber,
         COUNT(*) AS TotalOrders,
         SUM(ss.TotalDue) AS TotalSales,
         SUM(ss.TotalDue) / COUNT(*) AS AverageOrderValue,
-		CASE
-			WHEN SUM(ss.TotalDue) >= 50000 THEN 'High'
-			WHEN SUM(ss.TotalDue) >= 10000 THEN 'Medium'
-			ELSE 'Low'
-		END AS SalesCategory
+        CASE
+            WHEN SUM(ss.TotalDue) >= 50000 THEN 'High'
+            WHEN SUM(ss.TotalDue) >= 10000 THEN 'Medium'
+            ELSE 'Low'
+        END AS SalesCategory
     FROM Sales.Customer AS sc
     INNER JOIN Sales.SalesOrderHeader AS ss
         ON ss.CustomerID = sc.CustomerID
     WHERE sc.CustomerID = @CustomerID
     GROUP BY
-        sc.CustomerID,
-        sc.AccountNumber;
+        sc.CustomerID;
 END;
+GO
 
 EXEC EvaluateCustomerPerformance
     @CustomerID = 11000;
+GO
